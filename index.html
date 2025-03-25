@@ -1,1 +1,64 @@
-!
+<!DOCTYPE html>
+<html lang="pt-BR"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batalha Naval</title>
+    <link rel="stylesheet" href="Tabuleiro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Batalha Naval</h1>
+        <p>Batalha Naval é um jogo clássico de estrátegia que desafia o jogador a afundar os navios inimigos,
+            posicionados secretamente em um tabuleiro. <br>Combinando lógica, sorte e um toque de dedução.</br></p>
+        <!--Acho importante colocar um pouco sobre a historia do jogo.-->
+    </header>
+    <div> <!--Uma div inteira para as regras, tambem para facilitar a css-->
+        <section class="regras">
+            <h3><strong>Regras do jogo</strong></h3> <!--Esse strong serve para deixar a fonte em negrito-->
+            <ul>
+                <li>
+                    O jogador deve colocar os seus navios na grelha de defesa.
+                </li>
+                <li>
+                    Os navios só podem ser colocados no sentido horizontal e vertical.
+                </li>
+                <li>
+                    Cada jogador tem direito a 1 tiro. Se acertar, terá direito a mais 1 tiro até errar.
+                </li>
+                <li>
+                    Ganha quem afundar todos os navios primeiro.
+                </li>
+                
+                    <li>
+                        existem 5 navios: <!--fazer divs-->
+                        <div class="navios"> <!--Fiz essa div para para ficar mais facil na hora de fazer o css-->
+                        <ol> <!--Ol para que lista seja numerada, em cada li dos navios estava pensando em colocar imagens dos navios-->
+                            <li>
+                                Um <abbr title="Navio de guerra que serve de base para aeronaves, principalmente ofensivas. São geralmente os maiores navios da Marinha de um país."><em>porta-aviões</em></abbr> que abrange 5 quadrados na grelha.
+                            </li>
+                            <li>
+                                Um <abbr title="Navio que abastece o combustível de outros navios. (No jogo ele só atira mesmo, não pode mexer os navios após começar a partida!)"><em>navio-tanque</em></abbr> que abrange 4 quadrados na grelha.
+                            </li>
+                            <li>
+                                Um <abbr title="Navio de guerra que serve para escoltar e defender outros navios."><em>contratorpedeiros</em></abbr> que abrange 3 quadrados na grelha.
+                            </li>
+                            <li>
+                                Uma <abbr title="Navio de guerra projetado para defesa nacional, guerra antissubmarina, guerra antiaérea ou escolta."><em>fragata</em></abbr> que abrange 3 quadrados na grelha.
+                            </li>
+                            <li>
+                                Um <abbr title="Navio projetado para navegar na superfície da agua ou debaixo d'agua."><em>submarino</em></abbr> que abrange 2 quadrados na grelha.
+                            </li>
+                        </ol>
+                </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+
+</html>
