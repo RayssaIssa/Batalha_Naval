@@ -4,13 +4,14 @@
     margin: 0;
     padding: 0;
 }
+
 header{
 h1 {
     text-align: center;
+    font-size: 70px;
     color: white;
     font-family: "Tektur", sans-serif;
-    padding: 20px;
-    
+    padding: 20px;    
 }
 p {
     color: white;
@@ -23,12 +24,16 @@ p {
 
 body {
     background-color: rgb(19, 19, 124);
-    div {
+    overflow-y: visible;
+}
+    div .regras{
+        margin: 0 20%;
         padding: 20px;
         background-color: aliceblue;
         border: 2px;
         border-radius: 20px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: justify;
         h3 {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             color: black;
@@ -36,7 +41,7 @@ body {
             padding: 10px;
         }
     }
-        section {
+    section {
             display: flex;
             flex-direction: column;
             margin: 5px;
@@ -46,5 +51,18 @@ body {
                 margin-left: 5px;
                 text-decoration: none;
             }
-        }
+            .Lista_regras {
+                list-style-position: inside ;
+            }
+            .Lista_Navios {
+             abbr{
+                text-decoration: none;
+                em {
+                    color:rgb(186, 7, 7);
+                    cursor: pointer;
+                }
+            }
+            }
+            
+        
 

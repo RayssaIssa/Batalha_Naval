@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batalha Naval</title>
-    <link rel="stylesheet" href="Tabuleiro.css">
+    <link rel="stylesheet" href="Style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
     <div> <!--Uma div inteira para as regras, tambem para facilitar a css-->
         <section class="regras">
             <h3><strong>Regras do jogo</strong></h3> <!--Esse strong serve para deixar a fonte em negrito-->
-            <ul>
+            <ul class="Lista_regras">
                 <li>
                     O jogador deve colocar os seus navios na grelha de defesa.
                 </li>
@@ -37,7 +37,7 @@
                     <li>
                         existem 5 navios: <!--fazer divs-->
                         <div class="navios"> <!--Fiz essa div para para ficar mais facil na hora de fazer o css-->
-                        <ol> <!--Ol para que lista seja numerada, em cada li dos navios estava pensando em colocar imagens dos navios-->
+                        <ol class="Lista_Navios"> <!--Ol para que lista seja numerada, em cada li dos navios estava pensando em colocar imagens dos navios-->
                             <li>
                                 Um <abbr title="Navio de guerra que serve de base para aeronaves, principalmente ofensivas. São geralmente os maiores navios da Marinha de um país."><em>porta-aviões</em></abbr> que abrange 5 quadrados na grelha.
                             </li>
@@ -45,7 +45,7 @@
                                 Um <abbr title="Navio que abastece o combustível de outros navios. (No jogo ele só atira mesmo, não pode mexer os navios após começar a partida!)"><em>navio-tanque</em></abbr> que abrange 4 quadrados na grelha.
                             </li>
                             <li>
-                                Um <abbr title="Navio de guerra que serve para escoltar e defender outros navios."><em>contratorpedeiros</em></abbr> que abrange 3 quadrados na grelha.
+                                Um <abbr title="Navio de guerra que serve para escoltar e defender outros navios."><em>destrutor</em></abbr> que abrange 3 quadrados na grelha.
                             </li>
                             <li>
                                 Uma <abbr title="Navio de guerra projetado para defesa nacional, guerra antissubmarina, guerra antiaérea ou escolta."><em>fragata</em></abbr> que abrange 3 quadrados na grelha.
