@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+:root{
+    --cor-de-fundo: rgb(19, 19, 124);
+    --cor-de-letra: #fff;
+    --letra-preta: #333;
+    --cor-das-regras: aliceblue;
+}
 
 * {
     margin: 0;
     padding: 0;
 }
+<<<<<<< HEAD
 
 header{
 h1 {
@@ -64,5 +71,54 @@ body {
             }
             }
             
+=======
+
+body {
+    background-color: var(--cor-de-fundo);
+}
+
+header{
+    h1 {
+        text-align: center;
+        color: white;
+        font-family: "Tektur", sans-serif;
+        padding: 20px;
+        
+    }
+    p {
+        color: white;
+        text-align: justify;
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding-bottom: 10px;
+    }
+}
+
+
+div {
+    padding: 20px;
+    background-color: aliceblue;
+    border: 2px;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    h3 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: black;
+        text-align: center;
+        padding: 10px;
+    }
+}
+section {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.navios {
+    padding: 0;
+    margin-left: 5px;
+    text-decoration: none;
+}
+>>>>>>> b920b6dd3cc1ac3c4d42d34a048dd43a0b5fba41
         
 
