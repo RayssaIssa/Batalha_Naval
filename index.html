@@ -9,17 +9,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 <body>
+<section class="areaDeRegras">
     <header>
         <h1 class="titulo">Batalha Naval</h1>
         <p>Batalha Naval é um jogo clássico de estrátegia que desafia o jogador a afundar os navios inimigos,
             posicionados secretamente em um tabuleiro. <br>Combinando lógica, sorte e um toque de dedução.</br></p>
         <!--Acho importante colocar um pouco sobre a historia do jogo.-->
     </header>
+
     <div> <!--Uma div inteira para as regras, tambem para facilitar a css-->
         <section class="regras">
-            <h3><strong>Regras do jogo</strong></h3> <!--Esse strong serve para deixar a fonte em negrito-->
+            <h3>Regras do jogo</h3> 
             <ul class="Lista_regras">
                 <li>
                     O jogador deve colocar os seus navios na grelha de defesa.
@@ -54,11 +57,20 @@
                                 Um <abbr title="Navio projetado para navegar na superfície da agua ou debaixo d'agua."><em>submarino</em></abbr> que abrange 2 quadrados na grelha.
                             </li>
                         </ol>
-                </div>
+                    </div>
                 </li>
             </ul>
         </section>
     </div>
-</body>
 
+    <div id="iniciarJogo" class="botao">Iniciar Jogo</div>
+</section>
+
+    <section class="jogo">
+        <div class="container">
+            <div class="tabuleiro"></div>   <!-- O tabuleiro será gerado aqui dentro -->
+        </div>
+    </section>
+
+</body>
 </html>
