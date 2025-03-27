@@ -10,16 +10,17 @@
     margin: 0;
     padding: 0;
 }
-<<<<<<< HEAD
 
 header{
+
 h1 {
-    text-align: center;
+    text-align: left;
     font-size: 70px;
     color: white;
     font-family: "Tektur", sans-serif;
-    padding: 20px;    
+    padding: 20px;
 }
+
 p {
     color: white;
     text-align: justify;
@@ -33,7 +34,7 @@ body {
     background-color: rgb(19, 19, 124);
     overflow-y: visible;
 }
-    div .regras{
+    .regras{
         margin: 0 20%;
         padding: 20px;
         background-color: aliceblue;
@@ -71,7 +72,6 @@ body {
             }
             }
             
-=======
 
 body {
     background-color: var(--cor-de-fundo);
@@ -79,12 +79,17 @@ body {
 
 header{
     h1 {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
         color: white;
         font-family: "Tektur", sans-serif;
         padding: 20px;
         
     }
+
+    
+
     p {
         color: white;
         text-align: justify;
@@ -119,6 +124,27 @@ section {
     margin-left: 5px;
     text-decoration: none;
 }
->>>>>>> b920b6dd3cc1ac3c4d42d34a048dd43a0b5fba41
         
+.rodapé {
+    position: relative;
+    text-align: center;
+    font-size: 0.8pc;
+    margin-top: 50%;
+    border-radius: 0%;
+    padding: 1%;
+}
 
+.cabeçalho {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(19, 19, 124);
+
+    img {
+        left: 3rem;
+        position: relative;
+        width: 20rem;
+        height: 8rem;
+        margin: 1rem;
+        border-radius: 10rem;
+    }
+}
