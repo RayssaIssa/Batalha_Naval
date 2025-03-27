@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
 :root{
     --cor-de-fundo: rgb(19, 19, 124);
     --cor-de-letra: #fff;
@@ -10,6 +11,7 @@
     margin: 0;
     padding: 0;
 }
+<<<<<<< HEAD
 
 header{
 
@@ -72,26 +74,37 @@ body {
             }
             }
             
+=======
+>>>>>>> a23da0c226ac9f95d395fd86f4e669d29cbbc9fe
 
 body {
     background-color: var(--cor-de-fundo);
+    overflow-y: visible;
 }
 
 header{
     h1 {
+<<<<<<< HEAD
         display: flex;
         flex-direction: column;
         text-align: left;
         color: white;
+=======
+        text-align: center;
+        font-size: 70px;
+        color: var(--cor-de-letra);
+>>>>>>> a23da0c226ac9f95d395fd86f4e669d29cbbc9fe
         font-family: "Tektur", sans-serif;
-        padding: 20px;
-        
+        padding: 20px;    
     }
 
+<<<<<<< HEAD
     
 
+=======
+>>>>>>> a23da0c226ac9f95d395fd86f4e669d29cbbc9fe
     p {
-        color: white;
+        color: var(--cor-de-letra);
         text-align: justify;
         text-align: center;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -99,31 +112,36 @@ header{
     }
 }
 
-
-div {
+div .regras{
+    margin: 0 10%;
     padding: 20px;
-    background-color: aliceblue;
+    background-color: var(--cor-das-regras);
     border: 2px;
     border-radius: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+
     h3 {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color: black;
+        color: var(--letra-preta);
+        font-weight: bold;
         text-align: center;
         padding: 10px;
     }
 }
+
 section {
     display: flex;
     flex-direction: column;
     margin: 5px;
 }
-
+    
 .navios {
     padding: 0;
     margin-left: 5px;
     text-decoration: none;
 }
+<<<<<<< HEAD
         
 .rodapé {
     position: relative;
@@ -148,3 +166,63 @@ section {
         border-radius: 10rem;
     }
 }
+=======
+
+.Lista_regras {
+    list-style-position: inside ;
+}
+
+.Lista_Navios {
+    abbr{
+        text-decoration: none;
+
+        em {
+            color:rgb(186, 7, 7);
+            cursor: pointer;
+        }
+    }
+}
+
+/* ------------------- Parte do Botão Start ------------------- */
+.botao{
+    background-color: hsl(30, 100%, 50%);
+    margin: 2%;
+    text-align: center;
+    padding: .5em 1em;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: .2rem;
+    text-decoration: none;
+    color: var(--letra-preta);
+}
+
+.botao:hover, .botao:focus{
+    background-color: hsl(30, 100%, 40%);
+    transition: 0.3s;
+}
+        
+/* ------------------- Parte do Tabuleiro ------------------- */
+.jogo{
+    display: none;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tabuleiro{     
+    margin: 2vmin;
+    display: grid;
+    background-color: hsl(200, 100%, 50%);
+    grid-template-rows: repeat(10, 4.6vmin);
+    grid-template-columns: repeat(10, 4.6vmin);
+}
+
+/* Borda dos quadrados do tabuleiro */
+.tabuleiro div{
+    border: 1px solid hsl(0, 0%, 100%);     
+}
+>>>>>>> a23da0c226ac9f95d395fd86f4e669d29cbbc9fe
