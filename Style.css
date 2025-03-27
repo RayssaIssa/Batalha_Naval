@@ -11,7 +11,6 @@
     margin: 0;
     padding: 0;
 }
-<<<<<<< HEAD
 
 header{
 
@@ -74,8 +73,6 @@ body {
             }
             }
             
-=======
->>>>>>> a23da0c226ac9f95d395fd86f4e669d29cbbc9fe
 
 body {
     background-color: var(--cor-de-fundo);
@@ -84,25 +81,19 @@ body {
 
 header{
     h1 {
-<<<<<<< HEAD
         display: flex;
         flex-direction: column;
         text-align: left;
         color: white;
-=======
         text-align: center;
         font-size: 70px;
         color: var(--cor-de-letra);
->>>>>>> a23da0c226ac9f95d395fd86f4e669d29cbbc9fe
         font-family: "Tektur", sans-serif;
         padding: 20px;    
     }
 
-<<<<<<< HEAD
     
 
-=======
->>>>>>> a23da0c226ac9f95d395fd86f4e669d29cbbc9fe
     p {
         color: var(--cor-de-letra);
         text-align: justify;
@@ -141,9 +132,10 @@ section {
     margin-left: 5px;
     text-decoration: none;
 }
-<<<<<<< HEAD
         
 .rodapé {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: aliceblue;
     position: relative;
     text-align: center;
     font-size: 0.8pc;
@@ -152,7 +144,7 @@ section {
     padding: 1%;
 }
 
-.cabeçalho {
+.cabeçalho { /* criei essa classe para mexer na imagem e deixar do lado do titulo*/
     display: flex;
     flex-direction: row;
     background-color: rgb(19, 19, 124);
@@ -166,7 +158,6 @@ section {
         border-radius: 10rem;
     }
 }
-=======
 
 .Lista_regras {
     list-style-position: inside ;
@@ -225,4 +216,3 @@ section {
 .tabuleiro div{
     border: 1px solid hsl(0, 0%, 100%);     
 }
->>>>>>> a23da0c226ac9f95d395fd86f4e669d29cbbc9fe
