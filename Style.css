@@ -133,13 +133,12 @@ section {
     text-decoration: none;
 }
         
-.rodapé {
+.rodape {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: aliceblue;
-    position: relative;
     text-align: center;
     font-size: 0.8pc;
-    margin-top: 50%;
+    margin-top: 2%;
     border-radius: 0%;
     padding: 1%;
 }
