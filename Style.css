@@ -4,75 +4,75 @@
     --cor-de-fundo: rgb(19, 19, 124);
     --cor-de-letra: #fff;
     --letra-preta: #333;
-    --cor-das-regras: aliceblue;
 }
 
 * {
     margin: 0;
     padding: 0;
 }
+
+body {
+    background-color: var(--cor-de-fundo);
+    overflow-y: visible;
+}
+
 /*------------------------------Titulo e paragrafo do que é battleship---------------------------------*/
 header{
-
-h1 {
-    text-align: left;
-    font-size: 70px;
-    color: white;
-    font-family: "Tektur", sans-serif;
-    padding: 20px;
-}
-
-p {
-    color: white;
-    text-align: justify;
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-bottom: 10px;
-}
-}
-/*--------------------------------------Começo do body------------------------------------------*/
-body {
-    background-color: rgb(19, 19, 124);
-    overflow-y: visible;
-  }
-/*-----------------------------------estilo do quadrado de regras-------------------------------------------*/
-    .regras{
-        margin: 0 20%;
+    h1 {
+        text-align: left;
+        font-size: 70px;
+        color: var(--cor-de-letra);
+        font-family: "Tektur", sans-serif;
         padding: 20px;
-        background-color: aliceblue;
-        border: 2px;
-        border-radius: 20px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    p {
+        color: var(--cor-de-letra);
         text-align: justify;
-        h3 {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            color: black;
-            text-align: center;
-            padding: 10px;
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding-bottom: 10px;
+    }
+}
+
+/*-----------------------------------estilo do quadrado de regras-------------------------------------------*/
+.regras{
+    margin: 0 20%;
+    padding: 20px;
+    background-color: aliceblue;
+    border: 2px;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+    h3 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: var(--letra-preta);
+        text-align: center;
+        padding: 10px;
+    }
+}
+section {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+.navios {
+    padding: 0;
+    margin-left: 5px;
+    text-decoration: none;
+}
+.Lista_regras {
+    list-style-position: inside ;
+}
+.Lista_Navios {
+    abbr{
+        text-decoration: none;
+        em {
+            color:rgb(186, 7, 7);
+            cursor: pointer;
         }
     }
-    section {
-            display: flex;
-            flex-direction: column;
-            margin: 5px;
-            }
-            .navios {
-                padding: 0;
-                margin-left: 5px;
-                text-decoration: none;
-            }
-            .Lista_regras {
-                list-style-position: inside ;
-            }
-            .Lista_Navios {
-             abbr{
-                text-decoration: none;
-                em {
-                    color:rgb(186, 7, 7);
-                    cursor: pointer;
-                }
-            }
-            }
+}
             
 
 body {
@@ -85,7 +85,7 @@ header{
         display: flex;
         flex-direction: column;
         text-align: left;
-        color: white;
+        color: var(--cor-de-letra);
         text-align: center;
         font-size: 70px;
         color: var(--cor-de-letra);
