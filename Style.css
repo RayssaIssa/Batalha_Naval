@@ -11,7 +11,7 @@
     margin: 0;
     padding: 0;
 }
-
+/*------------------------------Titulo e paragrafo do que é battleship---------------------------------*/
 header{
 
 h1 {
@@ -30,11 +30,12 @@ p {
     padding-bottom: 10px;
 }
 }
-
+/*--------------------------------------Começo do body------------------------------------------*/
 body {
     background-color: rgb(19, 19, 124);
     overflow-y: visible;
-}
+  }
+/*-----------------------------------estilo do quadrado de regras-------------------------------------------*/
     .regras{
         margin: 0 20%;
         padding: 20px;
@@ -143,7 +144,9 @@ section {
     padding: 1%;
 }
 
-.cabeçalho { /* criei essa classe para mexer na imagem e deixar do lado do titulo*/
+/*--------------------classe para mexer na imagem e deixar do lado do titulo------------------*/
+
+.cabeçalho { 
     display: flex;
     flex-direction: row;
     background-color: rgb(19, 19, 124);
