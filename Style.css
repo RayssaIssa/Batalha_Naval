@@ -4,7 +4,6 @@
     --cor-de-fundo: rgb(19, 19, 124);
     --cor-de-letra: #fff;
     --letra-preta: #333;
-    --cor-das-regras: aliceblue;
 }
 
 * {
@@ -12,6 +11,7 @@
     padding: 0;
 }
 
+<<<<<<< HEAD
 header{
 
 h1 {
@@ -31,47 +31,70 @@ p {
 }
 }
 
+=======
+>>>>>>> 5adaabce67512e20db6ac96cca470699db083d63
 body {
-    background-color: rgb(19, 19, 124);
+    background-color: var(--cor-de-fundo);
     overflow-y: visible;
 }
-    .regras{
-        margin: 0 20%;
+
+/*------------------------------Titulo e paragrafo do que é battleship---------------------------------*/
+header{
+    h1 {
+        text-align: left;
+        font-size: 70px;
+        color: var(--cor-de-letra);
+        font-family: "Tektur", sans-serif;
         padding: 20px;
-        background-color: aliceblue;
-        border: 2px;
-        border-radius: 20px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    p {
+        color: var(--cor-de-letra);
         text-align: justify;
-        h3 {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            color: black;
-            text-align: center;
-            padding: 10px;
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding-bottom: 10px;
+    }
+}
+
+/*-----------------------------------estilo do quadrado de regras-------------------------------------------*/
+.regras{
+    margin: 0 20%;
+    padding: 20px;
+    background-color: aliceblue;
+    border: 2px;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+    h3 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: var(--letra-preta);
+        text-align: center;
+        padding: 10px;
+    }
+}
+section {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+.navios {
+    padding: 0;
+    margin-left: 5px;
+    text-decoration: none;
+}
+.Lista_regras {
+    list-style-position: inside ;
+}
+.Lista_Navios {
+    abbr{
+        text-decoration: none;
+        em {
+            color:rgb(186, 7, 7);
+            cursor: pointer;
         }
     }
-    section {
-            display: flex;
-            flex-direction: column;
-            margin: 5px;
-            }
-            .navios {
-                padding: 0;
-                margin-left: 5px;
-                text-decoration: none;
-            }
-            .Lista_regras {
-                list-style-position: inside ;
-            }
-            .Lista_Navios {
-             abbr{
-                text-decoration: none;
-                em {
-                    color:rgb(186, 7, 7);
-                    cursor: pointer;
-                }
-            }
-            }
+}
             
 
 body {
@@ -84,7 +107,7 @@ header{
         display: flex;
         flex-direction: column;
         text-align: left;
-        color: white;
+        color: var(--cor-de-letra);
         text-align: center;
         font-size: 70px;
         color: var(--cor-de-letra);
@@ -133,18 +156,19 @@ section {
     text-decoration: none;
 }
         
-.rodapé {
+.rodape {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: aliceblue;
-    position: relative;
     text-align: center;
     font-size: 0.8pc;
-    margin-top: 50%;
+    margin-top: 2%;
     border-radius: 0%;
     padding: 1%;
 }
 
-.cabeçalho { /* criei essa classe para mexer na imagem e deixar do lado do titulo*/
+/*--------------------classe para mexer na imagem e deixar do lado do titulo------------------*/
+
+.cabeçalho { 
     display: flex;
     flex-direction: row;
     background-color: rgb(19, 19, 124);
