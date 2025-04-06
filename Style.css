@@ -130,6 +130,7 @@ header{
 }
 
 .tabuleiro{     
+    aspect-ratio: 1 / 1;
     margin: 2vmin;
     display: grid;
     background-color: hsl(200, 100%, 50%);
@@ -147,4 +148,8 @@ header{
     border: 1px solid var(--cor-de-fundo); 
     box-sizing: border-box;    
     cursor: pointer;
+}
+
+.tabuleiro div.ocupado{
+    background-color: black;
 }
