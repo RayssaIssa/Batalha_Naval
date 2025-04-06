@@ -55,4 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
     iniciar.addEventListener('click', () => criarTabuleiro(tabuleiro, Quadrados)) //Adiciona um evento de click ao botão iniciar, que chama a função de criar o tabuleiro
 
 
+/*Um porta-aviões que abrange 5 quadrados na grelha.
+Um navio-tanque que abrange 4 quadrados na grelha.
+Um destrutor que abrange 3 quadrados na grelha.
+Uma fragata que abrange 3 quadrados na grelha.
+Um submarino que abrange 2 quadrados na grelha.
+*/
+
 })

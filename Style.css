@@ -13,28 +13,62 @@
 
 body {
     background-color: var(--cor-de-fundo);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/*-----------------------------------estilo do quadrado de regras-------------------------------------------*/
+/*-------------------- Parte do titulo, descrição e imagem da pagina de inicio  ------------------*/
+
+.cabeçalho { 
+    display: flex;
+    flex-direction: row;
+
+    img {
+        left: 3rem;
+        position: relative;
+        width: 20rem;
+        height: 8rem;
+        margin: 1rem;
+        border-radius: 10rem;
+    }
+}
+
+header{
+    .titulo {
+        display: flex;
+        flex-direction: column;
+        color: var(--cor-de-letra);
+        text-align: center;
+        font-size: 70px;
+        font-family: "Tektur", sans-serif;
+        padding: 20px;    
+    }
+
+    p {
+        color: var(--cor-de-letra);
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+
+/*----------------------------------- Parte do quadrado de regras -------------------------------------------*/
 .regras{
     margin: 0 20%;
-    padding: 20px;
+    padding: 2% 2%;
     background-color: aliceblue;
     border: 2px;
     border-radius: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: justify;
     h3 {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color: var(--letra-preta);
         text-align: center;
-        padding: 10px;
+        padding-bottom: 1%;
     }
 }
 
 .navios {
     padding: 0;
-    margin-left: 5px;
+    margin-left: 4%;
     text-decoration: none;
 }
 
@@ -52,92 +86,14 @@ body {
     }
 }
 
-header{
-    h1 {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        color: var(--cor-de-letra);
-        text-align: center;
-        font-size: 70px;
-        color: var(--cor-de-letra);
-        font-family: "Tektur", sans-serif;
-        padding: 20px;    
-    }
-
-    p {
-        color: var(--cor-de-letra);
-        text-align: justify;
-        text-align: center;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        padding-bottom: 10px;
-    }
-}
-
-div .regras{
-    margin: 0 10%;
-    padding: 20px;
-    background-color: var(--cor-das-regras);
-    border: 2px;
-    border-radius: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: justify;
-
-    h3 {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color: var(--letra-preta);
-        font-weight: bold;
-        text-align: center;
-        padding: 10px;
-    }
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-}
-        
+/* ------------------- Parte do Footer -------------------------*/
 .rodape {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: aliceblue;
     text-align: center;
     font-size: 0.8pc;
-    margin-top: 2%;
+    margin-top: 1%;
     border-radius: 0%;
     padding: 1%;
-}
-
-/*--------------------classe para mexer na imagem e deixar do lado do titulo------------------*/
-
-.cabeçalho { 
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(19, 19, 124);
-
-    img {
-        left: 3rem;
-        position: relative;
-        width: 20rem;
-        height: 8rem;
-        margin: 1rem;
-        border-radius: 10rem;
-    }
-}
-
-.Lista_regras {
-    list-style-position: inside ;
-}
-
-.Lista_Navios {
-    abbr{
-        text-decoration: none;
-
-        em {
-            color:rgb(186, 7, 7);
-            cursor: pointer;
-        }
-    }
 }
 
 /* ------------------- Parte do Botão Start ------------------- */
@@ -145,6 +101,7 @@ section {
     background-color: hsl(30, 100%, 50%);
     margin: 2%;
     text-align: center;
+    font-weight: bold;
     padding: .5em 1em;
     outline: none;
     border: none;
@@ -169,7 +126,7 @@ section {
     justify-content: center;
     width: 100%;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
 }
 
 .tabuleiro{     
@@ -178,10 +135,10 @@ section {
     background-color: hsl(200, 100%, 50%);
     grid-template-rows: repeat(10, 1fr);    /*Mudança para 1 frame para melhorar a responsividade*/
     grid-template-columns: repeat(10, 1fr);
-    width: 80vmin;      /* Limita o tabuleiro a 80% da largura da tela */
-    height: 80vmin;     /* Limita o tabuleiro a 80% da altura da tela */
-    max-width: 500px;   /* Limita o tamanho máximo para telas grandes */
-    max-height: 500px; 
+    width: 85vmin;      /* Limita o tabuleiro a 90% da largura da tela */
+    height: 85vmin;     /* Limita o tabuleiro a 90% da altura da tela */
+    max-width: 600px;   /* Limita o tamanho máximo para telas grandes */
+    max-height: 600px; 
 }
 
 /* Borda dos quadrados do tabuleiro */
