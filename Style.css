@@ -151,5 +151,5 @@ header{
 }
 
 .tabuleiro div.ocupado{
-    background-color: black;
+    background-color: black;    /* Cor temporaria apenas para fins de desenvolvimento */
 }

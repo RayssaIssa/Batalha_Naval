@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         // Coloca os navios no tabuleiro de forma aleatória
         navios.forEach(navio => {
-        colocarNavio(quadrados, navio);
+            colocarNavio(quadrados, navio);
         });
     }
 
