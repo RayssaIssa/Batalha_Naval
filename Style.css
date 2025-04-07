@@ -92,8 +92,10 @@ header{
     text-align: center;
     font-size: 0.8pc;
     margin-top: 1%;
-    border-radius: 0%;
     padding: 1%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 /* ------------------- Parte do Botão Start ------------------- */
