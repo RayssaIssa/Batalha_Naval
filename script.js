@@ -24,10 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabuleiro = document.querySelector('.tabuleiro') 
     const Quadrados = [] //Array para armazenar os quadrados do tabuleiro
     const width = 10    //Largura do tabuleiro
-    
+
     const totalBombas = Math.floor(width * width * 0.07); //Total de bombas será de 7% do tabuleiro
     let quantVidas = 5;    //Quantidade de vidas iniciais
-    const vidas = document.getElementById('vidas')
 
     // Definindo os navios
     const navios = [
@@ -92,6 +91,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 tabuleiro[idQuadrado].dataset.navio = `${navio.nome}-parte-${i + 1}`;   //Adiciona ao id o nome e a parte do navio
             }
         }
+    }
+
+    //Atualizando os corações de vida
+    function atualizarVidas(quantVidaAtual){
+        const coracoes = document.querySelectorAll('#vidas .vida')
+
+        coracoes.forEach((coracoes, num) => {
+            if(num >= quantVidaAtual){
+                coracoes.classList.add('perdida')
+            }else{
+                coracoes.classList.remove('perdida')
+            }
+        })
     }
 
     //Gerando as bombas
@@ -168,17 +180,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     somBomba.play()
                     quad.classList.add('explosao')
                     quantVidas--;
-                    vidas.textContent = quantVidas
+                    atualizarVidas(quantVidas)
 
                     if(quantVidas === 0){
+                        atualizarVidas(quantVidas)
                         somDerrota.play()
                         alert("Game over")
+                    }else{
+                        atualizarVidas(quantVidas)
                     }
                 }else{
                     console.log("Clique em água")
                     somClique.currentTime = 0
                     somClique.play()
-                    quad.classList('clicado')
+                    quad.classList.add('clicado')
                 }
             })
         }

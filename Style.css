@@ -156,14 +156,31 @@ header{
     background-color: black;    /* Cor temporaria apenas para fins de desenvolvimento */
 }
 
-/* ---------- Parte das Bombas ----------- */
+/* ------------------- Parte das Bombas ------------------- */
 
-/* Temporario, apenas para fins de desenvolvimento*/
 .tabuleiro div.bomba{
-    background-color: red;
+    background-color: red; /* Temporario, apenas para fins de desenvolvimento*/
 }
 
 .tabuleiro div.explosao{
     /* Aqui será a imagem da bomba (o dia que houver) */
     background-color: rgb(255, 94, 0);
+}
+
+/* ------------------- Parte das Vidas ------------------- */
+#vidas{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.vida{
+    transition: filter 0.3s ease;
+}
+
+.vida.perdida{
+    /* Deixa o coração de vida cinza */
+    filter: grayscale(1) brightness(0.5);
 }
