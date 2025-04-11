@@ -155,3 +155,15 @@ header{
 .tabuleiro div.ocupado{
     background-color: black;    /* Cor temporaria apenas para fins de desenvolvimento */
 }
+
+/* ---------- Parte das Bombas ----------- */
+
+/* Temporario, apenas para fins de desenvolvimento*/
+.tabuleiro div.bomba{
+    background-color: red;
+}
+
+.tabuleiro div.explosao{
+    /* Aqui será a imagem da bomba (o dia que houver) */
+    background-color: rgb(255, 94, 0);
+}

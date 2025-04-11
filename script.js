@@ -24,6 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabuleiro = document.querySelector('.tabuleiro') 
     const Quadrados = [] //Array para armazenar os quadrados do tabuleiro
     const width = 10    //Largura do tabuleiro
+    
+    const totalBombas = Math.floor(width * width * 0.07); //Total de bombas será de 7% do tabuleiro
+    let quantVidas = 5;    //Quantidade de vidas iniciais
+    const vidas = document.getElementById('vidas')
 
     // Definindo os navios
     const navios = [
@@ -90,6 +94,52 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    //Gerando as bombas
+    function geraBombas(quadrados, quantidade){
+        const bombas = new Set()
+        while(bombas.size < quantidade){
+            const num = numeroAleatorio(0, width * width - 1)
+            if(podeBomba(num, bombas, quadrados)){
+                bombas.add(num)
+                quadrados[num].classList.add('bomba')
+                quadrados[num].dataset.tipo = 'bomba'
+            }
+        }
+    }
+
+    //Verificando se tem bomba nos arredores
+    function podeBomba(num, bombas, quadrados){
+        const x = num % width   //Coluna
+        const y = Math.floor(num / width)   //Linha
+
+        //Evita que uma bomba seja colocada em cima de um navio
+        if(quadrados[num].classList.contains('ocupado')){
+            return false
+        }
+
+        //Entenda, estamos verificando os quadradinhos (células) em volta do quadrado que foi selecionado para ter a bomba, NÃO PODEMOS colocar uma bomba ao lado de outra
+
+        for(let celulaY = -1; celulaY <= 1; celulaY++){
+            for(let celulaX = -1; celulaX <= 1; celulaX++){
+                 
+                if(celulaX === 0 && celulaY === 0) continue   //Verifica se é a própria célula e pula
+                
+                //Cria variáveis para verificar os vizinhos
+                const vizinhoX = x + celulaX
+                const vizinhoY = y + celulaY
+
+                if(vizinhoX >= 0 && vizinhoX < width && vizinhoY >= 0 && vizinhoY < width){
+                    const vizinhosNum = vizinhoY * width + vizinhoX //Gera o numero final da célula do vizinho
+
+                    if(bombas.has(vizinhosNum)){
+                        return false    //Tem uma bomba ao redor
+                    }
+                }
+            }
+        }
+        return true //Nenhuma bomba nos vizinhos
+    }
+
     //Gerando o tabuleiro completo
     function criarTabuleiro(tabuleiro, quadrados) {
     
@@ -109,15 +159,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
             //som de clique quadrado sem nada
             quad.addEventListener('click', () => {
-                console.log("Clicado em agua")
-                somClique.currentTime = 0;
-                somClique.play();
-            });
+                //Captura o tipo de clique (classe)
+                const tipo = quad.dataset.tipo
+
+                if(tipo === 'bomba'){
+                    console.log("Clique em Bomba")
+                    somBomba.currentTime = 0
+                    somBomba.play()
+                    quad.classList.add('explosao')
+                    quantVidas--;
+                    vidas.textContent = quantVidas
+
+                    if(quantVidas === 0){
+                        somDerrota.play()
+                        alert("Game over")
+                    }
+                }else{
+                    console.log("Clique em água")
+                    somClique.currentTime = 0
+                    somClique.play()
+                    quad.classList('clicado')
+                }
+            })
         }
         // Coloca os navios no tabuleiro de forma aleatória
         navios.forEach(navio => {
             colocarNavio(quadrados, navio);
-        });
+        })
+
+        //Coloca as bombas
+        geraBombas(quadrados, totalBombas)
     }
 
     //Adiciona um evento de click ao botão iniciar, que chama a função de criar o tabuleiro
