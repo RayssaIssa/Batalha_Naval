@@ -1,7 +1,7 @@
 # 🛳️ Batalha Naval
 🚀 Jogo Web desenvolvido durante a disciplina de Paradigmas de Programação (2025) no curso de Ciência da Computação - UFJ
 
-Clique <a href="#">aqui</a>, jogue e se divirta!
+Clique <a href="https://batalha-naval-beta.vercel.app/">aqui</a>, jogue e se divirta!
 
 ## Sobre o jogo
 O jogo Batalha Naval é um jogo de tabuleiro que tem como objetivo afundar todos os navios do enimigo. Em nosso jogo, implementamos um sistema de vidas, o jogador inicia com 5 vidas e perde uma toda vez que acertar uma bomba, as bombas estão escondidas de maneira aleátoria no tabuleiro, quando todas as vidas acabarem, o jogador perde o jogo ☠️.
