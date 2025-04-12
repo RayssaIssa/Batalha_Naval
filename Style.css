@@ -18,24 +18,8 @@ body {
 
 /*-------------------- Parte do titulo, descrição e imagem da pagina de inicio  ------------------*/
 
-.cabeçalho { 
-    display: flex;
-    flex-direction: row;
-
-    img {
-        left: 3rem;
-        position: relative;
-        width: 20rem;
-        height: 8rem;
-        margin: 1rem;
-        border-radius: 10rem;
-    }
-}
-
 header{
     .titulo {
-        display: flex;
-        flex-direction: column;
         color: var(--cor-de-letra);
         text-align: center;
         font-size: 70px;
@@ -224,7 +208,7 @@ header{
     justify-content: center;
     gap: 5px;
     font-size: 20px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .vida{
