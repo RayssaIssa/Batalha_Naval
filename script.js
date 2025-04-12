@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const tipo = quad.dataset.tipo
 
                 //Verificando se o quadrado já foi selecionado
-                if (quad.classList.contains('clicado') || quad.classList.contains('explosao')) {
+                if (quad.classList.contains('clicado') || quad.classList.contains('explosao') || quad.classList.contains('acerto') || quad.classList.contains('`navio-afundado`')) {
                     return
                 }
 
