@@ -144,23 +144,74 @@ header{
     max-height: 600px; 
 }
 
-/* Borda dos quadrados do tabuleiro */
-/*Antiga cor das bordas hsl(0, 0%, 100%)*/
 .tabuleiro div{
     border: 1px solid var(--cor-de-fundo); 
     box-sizing: border-box;    
     cursor: pointer;
 }
 
+/* Cor dos barcos temporaria, apenas para fins de desenvolvimento 
 .tabuleiro div.ocupado{
-    background-color: black;    /* Cor temporaria apenas para fins de desenvolvimento */
+    background-color: rgb(255, 255, 255);    
+}*/
+
+.tabuleiro div.clicado{
+    background-color: aqua;
+}
+
+.tabuleiro div.acerto {
+    background-image: url(img/brilho.png);
+    background-size: contain;       
+    background-repeat: no-repeat;    
+    background-position: center;     
+    background-color: black;  
+}
+
+/* ------------------- Parte das imagens dos barcos ------------------- */
+
+/* QUANDO TIVERMOS AS IMAGENS AI ATIVAMOS ISSO 
+.tabuleiro div.navio-revelado {
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: cover;
+    animation: revelarNavio 0.5s ease-in-out forwards;
+}
+
+@keyframes revelarNavio {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}*/
+
+.navio-submarino-afundado {
+    background-color: rgb(0, 255, 85) !important;
+    animation: vibrar 0.2s infinite alternate;
+}
+
+.navio-porta-avioes-afundado{
+    background-color: rgb(255, 0, 140) !important;
+    animation: vibrar 0.2s infinite alternate;
+}
+
+.navio-navio-tanque-afundado{
+    background-color: rgb(255, 208, 0) !important;
+    animation: vibrar 0.2s infinite alternate;
+}
+
+.navio-destrutor-afundado{
+    background-color: rgb(255, 0, 255) !important;
+    animation: vibrar 0.2s infinite alternate;
+}
+
+.navio-fragata-afundado{
+    background-color: rgb(76, 0, 255) !important;
+    animation: vibrar 0.2s infinite alternate;
 }
 
 /* ------------------- Parte das Bombas ------------------- */
-
+/* Cor das bombas temporaria, apenas para fins de desenvolvimento
 .tabuleiro div.bomba{
-    background-color: red; /* Temporario, apenas para fins de desenvolvimento*/
-}
+    background-color: red; 
+}*/
 
 .tabuleiro div.explosao{
     /* Aqui será a imagem da bomba (o dia que houver) */
