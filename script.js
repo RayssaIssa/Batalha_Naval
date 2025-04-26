@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
             somFundo.pause()
             somVitoria.play()
 
-            alert("Parabéns! Você venceu!")
+            showResult("Parabéns! Você venceu!")
             reiniciarJogo()
         }
     }
@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if(quantVidas === 0){
                         atualizarVidas(quantVidas)
                         somDerrota.play()
-                        alert("Game over")
+                        showResult("Game over")
                         reiniciarJogo()
                     }else{
                         atualizarVidas(quantVidas)
@@ -287,3 +287,14 @@ document.addEventListener('DOMContentLoaded', () => {
     iniciar.addEventListener('click', () => criarTabuleiro(tabuleiro, Quadrados)) 
 
 })
+
+// Pop up depois da derrota/vitoria
+function showResult(result) {
+    document.getElementById("gameResultModal").style.display = "flex";
+    document.getElementById("resultMessage").textContent = result;
+  }
+  
+  function restartGame() {
+    location.reload(); //Atualiza a pagina pra reiniciar o jogo
+  }
+  
