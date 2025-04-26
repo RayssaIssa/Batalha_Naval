@@ -176,21 +176,16 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(`Navio ${nome} foi completamente afundado!`)
             
             //Mostrando o navio afundado
-            partesDoNavio.forEach((q) => {
-                q.classList.remove('acerto')
-                q.classList.add(`navio-${nome}-afundado`)
-            })            
 
-            /*  QUANDO TIVER AS IMAGENS AI COLOCAMOS ESSE CODIGO EM ACAO
             partesDoNavio.forEach((q, i) => {
                 q.classList.remove('acerto')
                 q.classList.add('navio-revelado')
     
                 // Define imagem e posição da parte do navio
-                q.style.backgroundImage = `url('./imgs/${nome}.png')`
+                q.style.backgroundImage = `url('./img/${nome}.png')`
                 q.style.backgroundSize = `${partesDoNavio.length * 100}% 100%`
                 q.style.backgroundPosition = `${i * -100}% 0%`
-            })*/
+            })
         }
     }
 
@@ -292,9 +287,9 @@ document.addEventListener('DOMContentLoaded', () => {
 function showResult(result) {
     document.getElementById("gameResultModal").style.display = "flex";
     document.getElementById("resultMessage").textContent = result;
-  }
+}
   
-  function restartGame() {
+function restartGame() {
     location.reload(); //Atualiza a pagina pra reiniciar o jogo
-  }
+}
   
