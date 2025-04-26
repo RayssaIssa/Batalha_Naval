@@ -81,14 +81,17 @@ document.addEventListener('DOMContentLoaded', () => {
         //Colocando o navio no tabuleiro
         for (let i = 0; i < navio.tamanho; i++) {
             let idQuadrado
+
             if (horizontal) {
                 idQuadrado = y * width + (x + i) //Calcula a posição horizontal
                 tabuleiro[idQuadrado].classList.add('ocupado')
                 tabuleiro[idQuadrado].dataset.navio = `${navio.nome}-parte-${i + 1}`
+                tabuleiro[idQuadrado].dataset.orientacao = 'horizontal'
             } else {
                 idQuadrado = (y + i) * width + x //Calcula a posição vertical
                 tabuleiro[idQuadrado].classList.add('ocupado')
                 tabuleiro[idQuadrado].dataset.navio = `${navio.nome}-parte-${i + 1}`   //Adiciona ao id o nome e a parte do navio
+                tabuleiro[idQuadrado].dataset.orientacao = 'vertical'
             }
         }
     }
@@ -180,11 +183,20 @@ document.addEventListener('DOMContentLoaded', () => {
             partesDoNavio.forEach((q, i) => {
                 q.classList.remove('acerto')
                 q.classList.add('navio-revelado')
-    
-                // Define imagem e posição da parte do navio
-                q.style.backgroundImage = `url('./img/${nome}.png')`
-                q.style.backgroundSize = `${partesDoNavio.length * 100}% 100%`
-                q.style.backgroundPosition = `${i * -100}% 0%`
+                const orientacao = q.dataset.orientacao
+                
+                // Define imagem e posição da parte do navio                
+                if(orientacao === 'horizontal'){               
+                    q.style.backgroundImage = `url('./img/${nome}.png')`
+                    q.style.backgroundSize = `${partesDoNavio.length * 100}% 100%`
+                    q.style.backgroundPosition = `${i * -100}% 0%`
+
+                }else if(orientacao === 'vertical'){                    
+                    q.style.backgroundImage = `url('./img/${nome}V.png')`
+                    //q.classList.add('vertical')
+                    q.style.backgroundSize = `100% ${partesDoNavio.length * 100}%`
+                    q.style.backgroundPosition = `0% ${i * -100}%`                    
+                }
             })
         }
     }

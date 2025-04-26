@@ -19,6 +19,9 @@ body {
 /*-------------------- Parte do titulo, descrição e imagem da pagina de inicio  ------------------*/
 .areaDeRegras{
     margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header{
@@ -37,14 +40,31 @@ header{
     }
 }
 
+@media screen and (max-width: 440px){
+    header .titulo{
+        font-size: 50px;
+        padding: 5px 0;
+    }
+    header p{
+        padding: 10px;
+        font-size: 18px;
+    }
+    .areaDeRegras{
+        margin-bottom: 10%;
+    }
+}
+
 /*----------------------------------- Parte do quadrado de regras -------------------------------------------*/
 .regras{
-    margin: 0 20%;
-    padding: 2% 2%;
+    margin: 0 10%;
+    width: 80%;
+    max-width: 800px;
+    padding: 2% 4%;
     background-color: aliceblue;
     border: 2px;
     border-radius: 20px;
     text-align: justify;
+    list-style-position: inside ;
     h3 {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color: var(--letra-preta);
@@ -53,14 +73,15 @@ header{
     }
 }
 
-.navios {
+.regras li, p{
+    font-size: 18px;
+    color: var(--letra-preta);
+}
+
+.navios, li{
     padding: 0;
     margin-left: 4%;
     text-decoration: none;
-}
-
-.Lista_regras {
-    list-style-position: inside ;
 }
 
 .Lista_Navios {
@@ -77,12 +98,11 @@ header{
 .rodape {
     background-color: aliceblue;
     text-align: center;
-    font-size: 0.8em;
-    margin-top: 1%;
-    padding: 1%;
+    font-size: 0.9em;
     width: 100vw;
     height: 5%;
-    max-height: 20px;
+    max-height: 30px;
+    padding-top: 5px;
     position: fixed;
     bottom: 0;
 }
@@ -90,11 +110,13 @@ header{
 /* ------------------- Parte do Botão Start ------------------- */
 .botao{
     background-color: hsl(30, 100%, 50%);
-    margin: 2%;
+    margin: 2% 10%;
     text-align: center;
     font-weight: bold;
-    padding: .5em 1em;
-    max-width: 400px;
+    font-size: 1.2em;
+    padding: .3em 1em;    
+    width: 80%;
+    max-width: 800px;
     outline: none;
     border: none;
     cursor: pointer;
@@ -166,6 +188,13 @@ header{
     background-size: cover;
     animation: revelarNavio 0.5s ease-in-out forwards;
 }
+/*  Rotacionar pelo Js e CSS não funcionou
+.tabuleiro div.navio-revelado.vertical{
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    transform-origin: center center;
+}*/
 
 @keyframes revelarNavio {
     from { opacity: 0; transform: scale(0.9); }
