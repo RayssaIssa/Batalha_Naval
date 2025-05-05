@@ -24,10 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabuleiro = document.querySelector('.tabuleiro') 
     const Quadrados = [] //Array para armazenar os quadrados do tabuleiro
     const width = 10    //Largura do tabuleiro
-
+    const init_modal = document.getElementById('abrirModal')
+    const modal = document.getElementById('janela-modal')
+    
     const totalBombas = Math.floor(width * width * 0.07) //Total de bombas será de 7% do tabuleiro
     let quantVidas = 5    //Quantidade de vidas iniciais
-
+    
+    function abrirModal() {
+        
+        modal.classList.add('abrir')
+    }
     // Definindo os navios
     const navios = [
         {nome: 'porta-avioes', tamanho: 5},
@@ -42,6 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return Math.floor(Math.random() * (max - min + 1) + min)
     }
 
+
+    /* 
+const modal = document.getElementById('janela-modal')
+        modal.classList.add('abrir')
+    */
     //Verificando se o navio pode ser colocado na posição selecionada
     function verificarPosicao(tabuleiro, navio, x, y, horizontal) {
         const tamanhoNavio = navio.tamanho
@@ -151,7 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return true //Nenhuma bomba nos vizinhos
     }
-
     //Verificando se todos os navios foram afundados
     function verificarVitoria(){
         //Verificando se tem alguma parte com 'ocupado' que não esteja com 'true'
@@ -286,4 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //Adiciona um evento de click ao botão iniciar, que chama a função de criar o tabuleiro
     iniciar.addEventListener('click', () => criarTabuleiro(tabuleiro, Quadrados)) 
 
+    //Adiciona um evento de click ao botão do modao, e chama a função de abrir
+    init_modal.addEventListener('click', () => abrirModal())
+ 
 })

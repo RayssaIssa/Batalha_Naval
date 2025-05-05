@@ -101,7 +101,54 @@ header{
     background-color: hsl(30, 100%, 40%);
     transition: 0.3s;
 }
-        
+/* Janela Modal */ 
+
+.janela-modal{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.342);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+.modal {
+    width: 60%;
+    min-height: 200px;
+    min-width: 650px;
+    background-color: #ffffff81;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.fechar {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 0;
+    background-color: red;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.btn {
+    background-color: orange;
+    text-align: center;
+}
+.btn:hover {
+    background-color: aliceblue;
+    cursor: pointer;
+}
+.janela-modal.abrir{
+    display: flex;
+}
 /* ------------------- Parte do Tabuleiro ------------------- */
 .jogo{
     display: none;
