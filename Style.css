@@ -129,7 +129,7 @@ header{
     background-color: hsl(30, 100%, 40%);
     transition: 0.3s;
 }
-/* Janela Modal */ 
+/* -------------- Janela Modal -------------- */ 
 
 .janela-modal{
     width: 100vw;
@@ -167,8 +167,19 @@ header{
     cursor: pointer;
 }
 .btn {
-    background-color: orange;
+    background-color: hsl(30, 100%, 50%);
+    margin-left: 94%;
     text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 8px;    
+    width: 8%;
+    max-width: 30px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-decoration: none;
+    color: var(--letra-preta);
 }
 .btn:hover {
     background-color: aliceblue;
@@ -176,6 +187,19 @@ header{
 }
 .janela-modal.abrir{
     display: flex;
+}
+@keyframes abrirmodal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.abrir .modal {
+    animation: abrirmodal 0.5s;
 }
 /* ------------------- Parte do Tabuleiro ------------------- */
 .jogo{

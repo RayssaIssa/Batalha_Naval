@@ -29,10 +29,18 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const totalBombas = Math.floor(width * width * 0.07) //Total de bombas será de 7% do tabuleiro
     let quantVidas = 5    //Quantidade de vidas iniciais
+
+    // Funções para o modal
     
     function abrirModal() {
         
         modal.classList.add('abrir')
+
+        modal.addEventListener('click', (e) => {
+            if(e.target.id == 'fechar' || e.target.id == 'janela-modal') {
+                modal.classList.remove('abrir')
+            }
+        })
     }
     // Definindo os navios
     const navios = [
