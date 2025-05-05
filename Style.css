@@ -134,7 +134,7 @@ header{
 .janela-modal{
     width: 100vw;
     height: 100vh;
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.342);
@@ -167,23 +167,29 @@ header{
     cursor: pointer;
 }
 .btn {
-    background-color: hsl(30, 100%, 50%);
-    margin-left: 94%;
-    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(145deg, #ffa500, #cc8400);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: bold;
     font-size: 1.2em;
-    padding: 8px;    
-    width: 8%;
-    max-width: 30px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
-    border: 1px solid black;
+    border: none;
     border-radius: 50%;
-    text-decoration: none;
-    color: var(--letra-preta);
+    color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
 }
 .btn:hover {
-    background-color: aliceblue;
-    cursor: pointer;
+    background: linear-gradient(145deg, #ffd27f, #e69800);
+    transform: scale(1.1);
+    color: #000;
 }
 .janela-modal.abrir{
     display: flex;
