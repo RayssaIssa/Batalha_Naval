@@ -92,14 +92,17 @@ const modal = document.getElementById('janela-modal')
         //Colocando o navio no tabuleiro
         for (let i = 0; i < navio.tamanho; i++) {
             let idQuadrado
+
             if (horizontal) {
                 idQuadrado = y * width + (x + i) //Calcula a posição horizontal
                 tabuleiro[idQuadrado].classList.add('ocupado')
                 tabuleiro[idQuadrado].dataset.navio = `${navio.nome}-parte-${i + 1}`
+                tabuleiro[idQuadrado].dataset.orientacao = 'horizontal'
             } else {
                 idQuadrado = (y + i) * width + x //Calcula a posição vertical
                 tabuleiro[idQuadrado].classList.add('ocupado')
                 tabuleiro[idQuadrado].dataset.navio = `${navio.nome}-parte-${i + 1}`   //Adiciona ao id o nome e a parte do navio
+                tabuleiro[idQuadrado].dataset.orientacao = 'vertical'
             }
         }
     }
@@ -172,7 +175,7 @@ const modal = document.getElementById('janela-modal')
             somFundo.pause()
             somVitoria.play()
 
-            alert("Parabéns! Você venceu!")
+            showResult("Parabéns! Você venceu!")
             reiniciarJogo()
         }
     }
@@ -186,21 +189,25 @@ const modal = document.getElementById('janela-modal')
             console.log(`Navio ${nome} foi completamente afundado!`)
             
             //Mostrando o navio afundado
-            partesDoNavio.forEach((q) => {
-                q.classList.remove('acerto')
-                q.classList.add(`navio-${nome}-afundado`)
-            })            
 
-            /*  QUANDO TIVER AS IMAGENS AI COLOCAMOS ESSE CODIGO EM ACAO
             partesDoNavio.forEach((q, i) => {
                 q.classList.remove('acerto')
                 q.classList.add('navio-revelado')
-    
-                // Define imagem e posição da parte do navio
-                q.style.backgroundImage = `url('./imgs/${nome}.png')`
-                q.style.backgroundSize = `${partesDoNavio.length * 100}% 100%`
-                q.style.backgroundPosition = `${i * -100}% 0%`
-            })*/
+                const orientacao = q.dataset.orientacao
+                
+                // Define imagem e posição da parte do navio                
+                if(orientacao === 'horizontal'){               
+                    q.style.backgroundImage = `url('./img/${nome}.png')`
+                    q.style.backgroundSize = `${partesDoNavio.length * 100}% 100%`
+                    q.style.backgroundPosition = `${i * -100}% 0%`
+
+                }else if(orientacao === 'vertical'){                    
+                    q.style.backgroundImage = `url('./img/${nome}V.png')`
+                    //q.classList.add('vertical')
+                    q.style.backgroundSize = `100% ${partesDoNavio.length * 100}%`
+                    q.style.backgroundPosition = `0% ${i * -100}%`                    
+                }
+            })
         }
     }
 
@@ -256,7 +263,7 @@ const modal = document.getElementById('janela-modal')
                     if(quantVidas === 0){
                         atualizarVidas(quantVidas)
                         somDerrota.play()
-                        alert("Game over")
+                        showResult("Game over")
                         reiniciarJogo()
                     }else{
                         atualizarVidas(quantVidas)
@@ -300,3 +307,14 @@ const modal = document.getElementById('janela-modal')
     init_modal.addEventListener('click', () => abrirModal())
  
 })
+
+// Pop up depois da derrota/vitoria
+function showResult(result) {
+    document.getElementById("gameResultModal").style.display = "flex";
+    document.getElementById("resultMessage").textContent = result;
+}
+  
+function restartGame() {
+    location.reload(); //Atualiza a pagina pra reiniciar o jogo
+}
+  
