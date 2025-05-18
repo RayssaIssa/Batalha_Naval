@@ -189,36 +189,35 @@ const modal = document.getElementById('janela-modal')
     }
 
     //Verificando o qual parte do navio
-    function verificarNavioAfundado(nome) {
-    const partesDoNavio = Quadrados.filter(q => q.dataset.navio?.startsWith(nome));
-    const todasAcertadas = partesDoNavio.every(q => q.dataset.acertado === 'true');
+    function verificarNavioAfundado(nome){
+        const partesDoNavio = Quadrados.filter(q => q.dataset.navio?.startsWith(nome))
+        const todasAcertadas = partesDoNavio.every(q => q.dataset.acertado === 'true')
 
-    partesDoNavio.forEach((q, i) => {
-        if (q.dataset.acertado === 'true') {
-            const orientacao = q.dataset.orientacao;
-            q.classList.remove('acerto'); // Remove a classe de acerto
-            q.classList.add('navio-revelado'); // Adiciona a classe de navio revelado
-            q.style.backgroundColor = 'transparent'; // Garante que o fundo seja transparente
+        if (todasAcertadas) {
+            console.log(`Navio ${nome} foi completamente afundado!`)
+            
+            //Mostrando o navio afundado
 
-            // Define imagem e posição da parte do navio                
-            if (orientacao === 'horizontal') {               
-                q.style.backgroundImage = `url('./img/${nome}.png')`;
-                q.style.backgroundSize = `${partesDoNavio.length * 100}% 100%`;
-                q.style.backgroundPosition = `${i * -100}% 0%`;
-            } else if (orientacao === 'vertical') {                    
-                q.style.backgroundImage = `url('./img/${nome}V.png')`;
-                q.style.backgroundSize = `100% ${partesDoNavio.length * 100}%`;
-                q.style.backgroundPosition = `0% ${i * -100}%`;
-            }
+            partesDoNavio.forEach((q, i) => {
+                q.classList.remove('acerto')
+                q.classList.add('navio-revelado')
+                const orientacao = q.dataset.orientacao
+                
+                // Define imagem e posição da parte do navio                
+                if(orientacao === 'horizontal'){               
+                    q.style.backgroundImage = `url('./img/${nome}.png')`
+                    q.style.backgroundSize = `${partesDoNavio.length * 100}% 100%`
+                    q.style.backgroundPosition = `${i * -100}% 0%`
+
+                }else if(orientacao === 'vertical'){                    
+                    q.style.backgroundImage = `url('./img/${nome}V.png')`
+                    //q.classList.add('vertical')
+                    q.style.backgroundSize = `100% ${partesDoNavio.length * 100}%`
+                    q.style.backgroundPosition = `0% ${i * -100}%`                    
+                }
+            })
         }
-    });
-
-    if (todasAcertadas) {
-        console.log(`Navio ${nome} foi completamente afundado!`);
     }
-}
-
-
 
     //Reiniciando o jogo
     function reiniciarJogo(){
@@ -260,7 +259,6 @@ const modal = document.getElementById('janela-modal')
                 if (quad.classList.contains('clicado') || quad.classList.contains('explosao') || quad.classList.contains('acerto') || quad.classList.contains('`navio-afundado`')) {
                     return
                 }
-                
 
                 if(tipo === 'bomba'){
                     console.log("Clique em Bomba")
@@ -279,22 +277,20 @@ const modal = document.getElementById('janela-modal')
                         atualizarVidas(quantVidas)
                     }
 
-                } else if (quad.classList.contains('ocupado')) {
-    // Acertou uma parte do navio
-    const nomeNavio = quad.dataset.navio.split('-parte-')[0]; // pega o nome
-    console.log("Acertou o navio: ", nomeNavio);
+                }else if(quad.classList.contains('ocupado')){
+                    //Acertou uma parte do navio
+                    const nomeNavio = quad.dataset.navio.split('-parte-')[0] //pega o nome
+                    console.log("Acertou o navio: ", nomeNavio)
 
-    somAfundado.currentTime = 0;
-    somAfundado.play();
-    quad.classList.add('acerto');
-    quad.dataset.acertado = 'true'; // Marca a parte como acertada
+                    somAfundado.currentTime = 0
+                    somAfundado.play()
+                    quad.classList.add('acerto')
+                    quad.dataset.acertado = 'true'
 
-    // Revela a parte do navio que foi acertada
-    verificarNavioAfundado(nomeNavio); // Verifica se o navio foi afundado
-    verificarVitoria(); // Verifica se o jogador venceu
-}
+                    verificarNavioAfundado(nomeNavio)
+                    verificarVitoria()
 
-else{
+                }else{
                     console.log("Clique em água")
                     somClique.currentTime = 0
                     somClique.play()
