@@ -16,7 +16,7 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/*-------------------- Parte do titulo, descrição e imagem da pagina de inicio  ------------------*/
+/*-------------------- Parte do titulo e descrição  ------------------*/
 .areaDeRegras{
     margin-bottom: 5%;
     display: flex;
@@ -129,8 +129,8 @@ header{
     background-color: hsl(30, 100%, 40%);
     transition: 0.3s;
 }
-/* -------------- Janela Modal -------------- */ 
 
+/* -------------- Janela Modal -------------- */ 
 .janela-modal{
     width: 100vw;
     height: 100vh;
@@ -143,6 +143,7 @@ header{
     justify-content: center;
     z-index: 999;
 }
+
 .modal {
     width: 60%;
     min-height: 200px;
@@ -166,6 +167,7 @@ header{
     font-size: 20px;
     cursor: pointer;
 }
+
 .btn {
     position: fixed;
     bottom: 20px;
@@ -186,14 +188,17 @@ header{
     transition: all 0.3s ease;
     z-index: 1000;
 }
+
 .btn:hover {
     background: linear-gradient(145deg, #ffd27f, #e69800);
     transform: scale(1.1);
     color: #000;
 }
+
 .janela-modal.abrir{
     display: flex;
 }
+
 @keyframes abrirmodal {
     from {
         opacity: 0;
@@ -204,9 +209,11 @@ header{
         transform: translate3d(0, 0, 0);
     }
 }
+
 .abrir .modal {
     animation: abrirmodal 0.5s;
 }
+
 /* ------------------- Parte do Tabuleiro ------------------- */
 .jogo{
     display: none;
@@ -265,13 +272,6 @@ header{
     background-size: cover;
     animation: revelarNavio 0.5s ease-in-out forwards;
 }
-/*  Rotacionar pelo Js e CSS não funcionou
-.tabuleiro div.navio-revelado.vertical{
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    transform-origin: center center;
-}*/
 
 @keyframes revelarNavio {
     from { opacity: 0; transform: scale(0.9); }
