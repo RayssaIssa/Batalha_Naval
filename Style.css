@@ -291,8 +291,8 @@ header{
 
 .tabuleiro div.explosao{
     /* Aqui será a imagem da bomba */
-    background-image: url('img/Bombas.png');
-   /* background-color: rgb(255, 94, 0);*/
+    background-image: url(img/Bombas.png);
+    background-color: rgb(255, 94, 0);
 }
 
 /* ------------------- Parte das Vidas ------------------- */
