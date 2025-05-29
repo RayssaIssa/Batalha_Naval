@@ -257,7 +257,7 @@ header{
 }
 
 .tabuleiro div.acerto {
-    background-image: url(img/brilho.png);
+    background-image: url(img/alvoEncontrado.png);
     background-size: contain;       
     background-repeat: no-repeat;    
     background-position: center;     
@@ -290,7 +290,8 @@ header{
 }*/
 
 .tabuleiro div.explosao{
-    /* Aqui será a imagem da bomba (o dia que houver) */
+    /* Aqui será a imagem da bomba */
+    background-image: url('img/Bombas.png');
     background-color: rgb(255, 94, 0);
 }
 
