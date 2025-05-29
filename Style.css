@@ -261,7 +261,7 @@ header{
     background-size: contain;       
     background-repeat: no-repeat;    
     background-position: center;     
-    background-color: black;  
+   /*background-color: black;*/
 }
 
 /* ------------------- Parte das imagens dos barcos ------------------- */
@@ -292,7 +292,7 @@ header{
 .tabuleiro div.explosao{
     /* Aqui será a imagem da bomba */
     background-image: url('img/Bombas.png');
-    background-color: rgb(255, 94, 0);
+   /* background-color: rgb(255, 94, 0);*/
 }
 
 /* ------------------- Parte das Vidas ------------------- */
