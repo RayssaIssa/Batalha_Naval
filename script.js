@@ -24,16 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabuleiro = document.querySelector('.tabuleiro') 
     const Quadrados = [] //Array para armazenar os quadrados do tabuleiro
     const width = 10    //Largura do tabuleiro
-    const init_modal = document.getElementById('abrirModal')
-    const modal = document.getElementById('janela-modal')
+
+    const initModal = document.getElementById('abrirModal')
+    const modal = document.getElementById('janelaModal')
     
     const totalBombas = Math.floor(width * width * 0.07) //Total de bombas será de 7% do tabuleiro
     let quantVidas = 5    //Quantidade de vidas iniciais
 
-    // Funções para o modal
-    
-    function abrirModal() {
-        
+    // Funções para o modal  
+    function abrirModal() {        
         modal.classList.add('abrir')
 
         modal.addEventListener('click', (e) => {
@@ -42,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     }
+
     // Definindo os navios
     const navios = [
         {nome: 'porta-avioes', tamanho: 5},
@@ -51,16 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
         {nome: 'submarino', tamanho: 2}
     ];
 
-    //Gerando um número aleatório para
+    //Gerando um número aleatório para as posições
     function numeroAleatorio(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min)
     }
 
-
-    /* 
-const modal = document.getElementById('janela-modal')
-        modal.classList.add('abrir')
-    */
     //Verificando se o navio pode ser colocado na posição selecionada
     function verificarPosicao(tabuleiro, navio, x, y, horizontal) {
         const tamanhoNavio = navio.tamanho
@@ -173,6 +168,7 @@ const modal = document.getElementById('janela-modal')
         }
         return true //Nenhuma bomba nos vizinhos
     }
+
     //Verificando se todos os navios foram afundados
     function verificarVitoria(){
         //Verificando se tem alguma parte com 'ocupado' que não esteja com 'true'
@@ -211,7 +207,6 @@ const modal = document.getElementById('janela-modal')
 
                 }else if(orientacao === 'vertical'){                    
                     q.style.backgroundImage = `url('./img/${nome}V.png')`
-                    //q.classList.add('vertical')
                     q.style.backgroundSize = `100% ${partesDoNavio.length * 100}%`
                     q.style.backgroundPosition = `0% ${i * -100}%`                    
                 }
@@ -312,7 +307,7 @@ const modal = document.getElementById('janela-modal')
     iniciar.addEventListener('click', () => criarTabuleiro(tabuleiro, Quadrados)) 
 
     //Adiciona um evento de click ao botão do modao, e chama a função de abrir
-    init_modal.addEventListener('click', () => abrirModal())
+    initModal.addEventListener('click', () => abrirModal())
  
 })
 

@@ -84,7 +84,7 @@ header{
     text-decoration: none;
 }
 
-.Lista_Navios {
+.listaNavios {
     abbr{
         text-decoration: none;
         em {
@@ -131,7 +131,7 @@ header{
 }
 
 /* -------------- Janela Modal -------------- */ 
-.janela-modal{
+.janelaModal{
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -195,7 +195,7 @@ header{
     color: #000;
 }
 
-.janela-modal.abrir{
+.janelaModal.abrir{
     display: flex;
 }
 
